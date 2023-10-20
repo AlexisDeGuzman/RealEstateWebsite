@@ -31,7 +31,6 @@ export default function Signup() {
       );
 
       const data = await res.json();
-      console.log(data);
       if(data.success === false) {
         setLoading(false);
         setError(data.message);
@@ -40,7 +39,6 @@ export default function Signup() {
       setLoading(false);
       setError(null);
       navigate('/sign-in');
-      console.log('hi');
     } catch (error) {
       setLoading(false);
       setError(error.message);
