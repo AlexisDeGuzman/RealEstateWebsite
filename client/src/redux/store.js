@@ -3,6 +3,7 @@ import userReducer from './user/userSlice';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+// We can add all the reducers we have on this section
 const rootReducer = combineReducers({user: userReducer});
 
 const persistConfig = {
