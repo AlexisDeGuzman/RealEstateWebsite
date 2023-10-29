@@ -11,7 +11,7 @@ export default function Profile() {
   const [ fileUploadError, setFileUploadError ] = useState(false);
   const [ formData, setFormData ] = useState({});
 
-  // firebase storage
+  // firebase storage code
   // allow read;
   // allow write: if 
   // request.resource.size < 2* 1024 * 1024 &&
@@ -76,23 +76,23 @@ export default function Profile() {
         <p className='text-sm self-center'>
           {fileUploadError 
             ? 
-            <span className='text-red-700'>
-              Error Image Upload(Image must be less than 2mb)
-            </span>
+              <span className='text-red-700'>
+                Error Image Upload(Image must be less than 2mb)
+              </span>
             :
-            filePerc > 0 && filePerc < 100
+              filePerc > 0 && filePerc < 100
             ? 
-            <span className='text-slate-700'>
-              {`Uploading ${filePerc}%`}
-            </span>
+              <span className='text-slate-700'>
+                {`Uploading ${filePerc}%`}
+              </span>
             :
-            filePerc === 100
+              filePerc === 100
             ?
-            <span className='text-green-700'>
-              Image successfully uploaded!
-            </span>
+              <span className='text-green-700'>
+                Image successfully uploaded!
+              </span>
             :
-            ""
+              ""
           }
         </p>
         <input type="text" placeholder='username' className='border p-3 rounded-lg' id='username' />
